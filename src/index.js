@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import HomePage from "./homepage.component";
+import HomePage from "../src/pages/homepage/homepage.component";
 
 import "./styles.css";
 
