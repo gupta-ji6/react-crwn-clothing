@@ -14,10 +14,14 @@ const config = {
 };
 
 export const createUserProfileDocument = async (userAuth, additionalData) => {
+  // if user is not signed in, then return null
   if (!userAuth) return;
 
   const userRef = firestore.doc(`users/${userAuth.uid}`);
   const snapshot = await userRef.get();
+  // console.log(snapshot);
+
+  // if it's snapshot i.e. user with this user ID doesn't exixts in firestore, then we need to create it
 
   if (!snapshot.exists) {
     const { displayName, email } = userAuth;
@@ -31,7 +35,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         ...additionalData
       });
     } catch (err) {
-      console.log("erro creating a user", err.message);
+      console.log("error creating a user", err.message);
     }
   }
   return userRef;
