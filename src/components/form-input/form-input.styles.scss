@@ -11,6 +11,10 @@ $main-color: black;
   position: relative;
   margin: 45px 0;
 
+  input:focus {
+    outline: none;
+  }
+
   .form-input {
     background: none;
     background-color: white;
@@ -25,7 +29,7 @@ $main-color: black;
     margin: 25px 0;
 
     &:focus {
-      outline: none;
+      outline: none !important;
     }
 
     &:focus ~ .form-input-label {
@@ -33,7 +37,7 @@ $main-color: black;
     }
   }
 
-  input[type='password'] {
+  input[type="password"] {
     letter-spacing: 0.3em;
   }
 
