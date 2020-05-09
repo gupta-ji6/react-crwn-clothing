@@ -31,7 +31,6 @@ class SignIn extends React.Component {
 
   handleChange = (event) => {
     const { value, name } = event.target;
-
     this.setState({ [name]: value });
   };
 
@@ -60,7 +59,7 @@ class SignIn extends React.Component {
             required
           />
           <ButtonsBarContainer>
-            <CustomButton type="submit"> Sign In </CustomButton>
+            <CustomButton type="submit">Sign In</CustomButton>
             <CustomButton
               type="button"
               onClick={googleSignInStart}
