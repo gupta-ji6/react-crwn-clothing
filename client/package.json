@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "",
   "keywords": [],
+  "private": true,
+  "proxy": "http://localhost:5000",
   "main": "src/index.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "firebase": "^7.4.0",
     "node-sass": "^4.13.1",
     "react": "16.8.6",
